@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Opera GX Style Magenta to Purple Cyber Gradient -->
+    <linearGradient id="oprahJakeNeon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff0055" />
+      <stop offset="50%" stop-color="#ff0099" />
+      <stop offset="100%" stop-color="#7a00ff" />
+    </linearGradient>
+
+    <!-- Dark Metal Background Gradient -->
+    <linearGradient id="darkMetal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#151924" />
+      <stop offset="100%" stop-color="#07090e" />
+    </linearGradient>
+
+    <!-- High-Intensity Neon Glow Filter -->
+    <filter id="neonGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Dark Shield Base Ring -->
+  <circle cx="256" cy="256" r="230" fill="url(#darkMetal)" stroke="rgba(255, 0, 85, 0.3)" stroke-width="6"/>
+
+  <!-- Main Opera-Style Outer Ring 'O' -->
+  <path d="M 256 80 
+           C 353 80 432 159 432 256 
+           C 432 353 353 432 256 432 
+           C 159 432 80 353 80 256 
+           C 80 159 159 80 256 80 Z 
+           M 256 145 
+           C 195 145 145 195 145 256 
+           C 145 317 195 367 256 367 
+           C 317 367 367 317 367 256 
+           C 367 195 317 145 256 145 Z" 
+        fill="url(#oprahJakeNeon)" filter="url(#neonGlow)"/>
+
+  <!-- Cyber Cutouts Creating the "JakeX" Intersecting Lasers -->
+  <!-- White Accent Beam -->
+  <polygon points="310,130 350,130 220,380 180,380" fill="#ffffff" filter="url(#neonGlow)" opacity="0.9" />
+  
+  <!-- Neon Intersecting Beam forming the 'X' -->
+  <polygon points="180,130 220,130 350,380 310,380" fill="url(#oprahJakeNeon)" filter="url(#neonGlow)" />
+</svg>
